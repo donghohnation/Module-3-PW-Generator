@@ -4,6 +4,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log("Hey U clicked a button");
 
+
+
 // 1. promt the user for the password criteria//
 //    a. password lengh 8-28
 //    b. lowercase, uppercase, numbers, special characters
@@ -12,8 +14,56 @@ function generatePassword() {
 
 
 // 4. display generated password on the page
+
+
   return "Generated Password will show here"; 
 }
+
+
+
+
+
+//DOM Elements
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const uppercaseEl = document.getElementById('uppercase');
+const lowercaseEl = document.getElementById('lowercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+
+
+
+const randomFunc = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  symbol: getRandomSymbol
+};
+
+generateEl.addEventListener('click', () => {
+  const length = lengthEl.value;
+
+  console.log(typeof length); 
+})
+
+function getRandomLower(){
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function getRandomSymbol() {
+  const symbols = '!@#$%^&*(){}[]=<>/,.';
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
 
 
 // Get references to the #generate element
