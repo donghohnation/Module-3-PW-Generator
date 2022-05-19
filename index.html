@@ -25,10 +25,25 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" onclick="getPassword()" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-    <script src="./Develop/script.js"></script>
+    <script src="./Develop/script2.js"></script>
+    <!-- <script type="text/javascript">
+      function getPassword(){
+
+          var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_-+=<>?[]{ }:;";
+          var passwordLength = 128;
+          var password = "";
+
+          for (var i=0; i<passwordLength; i++){
+            var randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars.substring(randomNumber,randomNumber+1);
+          }
+          document.getElementById("password").value = password
+        }
+
+    </script> -->
   </body>
 </html>

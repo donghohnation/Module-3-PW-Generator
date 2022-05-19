@@ -2,6 +2,21 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+  const chars = 
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_-+=<>?[]{}:;";
+  let passwordLength = 128;
+  let password = '';
+
+  for (let i = 0; i < passwordLength; i++) {
+    let getRandomNumber = Math.floor(Math.random() * chars.length);
+    
+    password += chars.substring(randomNumber, randomNumber + 1);
+  }
+
+  document.getElementById("password").value = password;
+
+
+
   console.log("Hey U clicked a button");
 
 
@@ -16,11 +31,13 @@ function generatePassword() {
 // 4. display generated password on the page
 
 
-  return "Generated Password will show here"; 
+  return "Random"; 
 }
 
 
-
+const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*_-+=";
 
 
 //DOM Elements
